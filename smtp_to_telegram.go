@@ -322,7 +322,7 @@ func SendMessageToChat(
 	resp, err := client.PostForm(
 		// https://core.telegram.org/bots/api#sendmessage
 		fmt.Sprintf(
-			"%sbot%s/sendMessage?disable_web_page_preview=true",
+			"%sbot%s/sendMessage?disable_web_page_preview=true&parse_mode=Markdown",
 			telegramConfig.telegramApiPrefix,
 			telegramConfig.telegramBotToken,
 		),
